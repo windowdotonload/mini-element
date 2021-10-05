@@ -3,6 +3,7 @@
  * @version:
  * @Author: windowdotonload
  */
+
 module.exports = {
   env: {
     browser: true,
@@ -18,6 +19,6 @@ module.exports = {
   plugins: ["vue"],
   rules: {
     quotes: 2,
-    semi: 1,
+    semi: 0,
   },
 };

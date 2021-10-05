@@ -1,18 +1,9 @@
 /*
- * @Descripttion: 
- * @version: 
- * @Author: windowdotonload
- */
-/*
  * @Descripttion:
  * @version:
  * @Author: windowdotonload
  */
-/*
- * @Descripttion:
- * @version:
- * @Author: windowdotonload
- */
+
 import ELButton from "./src/button.vue";
 
 ELButton.install = function (Vue) {
