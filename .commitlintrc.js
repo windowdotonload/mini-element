@@ -5,6 +5,6 @@
  */
 
 module.exports = {
-  extends: ["other-config", "cz"],
+  extends: ["cz"],
   rules: {},
 };
