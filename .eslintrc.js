@@ -21,4 +21,7 @@ module.exports = {
     quotes: 2,
     semi: 0,
   },
+  globals: {
+    process: true,
+  },
 };
