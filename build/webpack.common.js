@@ -3,23 +3,30 @@
  * @version:
  * @Author: windowdotonload
  */
+
 const path = require("path");
 const VueLoaderPlugin = require("vue-loader/lib/plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const config = require("./config.js");
 
 module.exports = {
   mode: "production",
-  entry: {
-    app: ["./src/index.js"],
-  },
+  // entry: {
+  //   app: ["./src/index.js"],
+  // },
+  entry: path.join(__dirname, "../src/index.js"),
+
   output: {
     path: path.resolve(process.cwd(), "./lib"),
-    publicPath: "/dist/",
+    publicPath: "",
     filename: "element-ui.common.js",
     chunkFilename: "[id].js",
     libraryExport: "default",
     library: "ELEMENT",
     libraryTarget: "commonjs2",
+  },
+  devServer: {
+    port: 9000,
   },
   resolve: {
     extensions: [".js", ".vue", ".json"],
@@ -55,5 +62,11 @@ module.exports = {
       },
     ],
   },
-  plugins: [new VueLoaderPlugin()],
+  plugins: [
+    // new HtmlWebpackPlugin({
+    //   filename: "index.html",
+    //   template: "index.html",
+    // }),
+    new VueLoaderPlugin(),
+  ],
 };

@@ -3,6 +3,11 @@
  * @version:
  * @Author: windowdotonload
  */
+/*
+ * @Descripttion:
+ * @version:
+ * @Author: windowdotonload
+ */
 
 module.exports = {
   env: {
@@ -23,5 +28,6 @@ module.exports = {
   },
   globals: {
     process: true,
+    __dirname: true,
   },
 };
