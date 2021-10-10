@@ -5,6 +5,7 @@
  */
 
 const path = require("path");
+const webpack = require("webpack");
 const VueLoaderPlugin = require("vue-loader/lib/plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const config = require("./config.js");
@@ -18,19 +19,21 @@ module.exports = {
 
   output: {
     path: path.resolve(process.cwd(), "./lib"),
-    publicPath: "",
+    // publicPath: "",
     filename: "element-ui.common.js",
-    chunkFilename: "[id].js",
-    libraryExport: "default",
-    library: "ELEMENT",
-    libraryTarget: "commonjs2",
+    // chunkFilename: "[id].js",
+    // libraryExport: "default",
+    // library: "ELEMENT",
+    // libraryTarget: "esm",
   },
+  devtool: "source-map",
   devServer: {
     port: 9000,
   },
   resolve: {
     extensions: [".js", ".vue", ".json"],
   },
+
   module: {
     rules: [
       {
@@ -62,11 +65,20 @@ module.exports = {
       },
     ],
   },
+
   plugins: [
-    // new HtmlWebpackPlugin({
-    //   filename: "index.html",
-    //   template: "index.html",
-    // }),
+    new HtmlWebpackPlugin({
+      filename: "index.html",
+      template: "./index.html",
+      favicon: "./favicon.ico",
+    }),
     new VueLoaderPlugin(),
+    new webpack.LoaderOptionsPlugin({
+      vue: {
+        compilerOptions: {
+          preserveWhitespace: false,
+        },
+      },
+    }),
   ],
 };
