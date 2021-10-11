@@ -3,10 +3,15 @@
  * @version:
  * @Author: windowdotonload
  */
+/*
+ * @Descripttion:
+ * @version:
+ * @Author: windowdotonload
+ */
 
 "use strict";
 
-const { series, src, dest } = require("gulp");
+const { series, src, dest, watch } = require("gulp");
 const sass = require("gulp-sass");
 const autoprefixer = require("gulp-autoprefixer");
 const cssmin = require("gulp-cssmin");
@@ -28,4 +33,9 @@ function copyfont() {
   return src("./src/fonts/**").pipe(cssmin()).pipe(dest("./lib/fonts"));
 }
 
-exports.build = series(compile, copyfont);
+function modcss() {
+  return watch("./src/*.scss", function () {
+    compile();
+  });
+}
+exports.build = series(compile, copyfont, modcss);

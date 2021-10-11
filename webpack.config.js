@@ -10,16 +10,16 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 // const config = require("./config.js");
 
 module.exports = {
-  mode: "production",
+  mode: "development",
   // entry: {
   //   app: ["./src/index.js"],
   // },
-  entry: path.join(__dirname, "./src/index.js"),
+  entry: path.join(__dirname, "./Tryout/index.js"),
 
   output: {
     path: path.resolve(process.cwd(), "./lib"),
     // publicPath: "",
-    filename: "element-ui.common.js",
+    filename: "tryElm.js",
     // chunkFilename: "[id].js",
     // libraryExport: "default",
     // library: "ELEMENT",
@@ -28,6 +28,7 @@ module.exports = {
   devtool: "source-map",
   devServer: {
     port: 9000,
+    hot: true,
   },
   resolve: {
     extensions: [".js", ".vue", ".json"],
@@ -51,9 +52,10 @@ module.exports = {
         },
       },
       {
-        test: /\.css$/,
-        loaders: ["style-loader", "css-loader"],
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
       },
+      { test: /\.scss$/, use: ["style-loader", "css-loader", "sass-loader"] },
       {
         test: /\.(svg|otf|ttf|woff2?|eot|gif|png|jpe?g)(\?\S*)?$/,
         loader: "url-loader",
