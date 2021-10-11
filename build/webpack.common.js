@@ -5,7 +5,6 @@
  */
 
 const path = require("path");
-const webpack = require("webpack");
 const VueLoaderPlugin = require("vue-loader/lib/plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 // const config = require("./config.js");
@@ -73,12 +72,5 @@ module.exports = {
       favicon: "./favicon.ico",
     }),
     new VueLoaderPlugin(),
-    new webpack.LoaderOptionsPlugin({
-      vue: {
-        compilerOptions: {
-          preserveWhitespace: false,
-        },
-      },
-    }),
   ],
 };
