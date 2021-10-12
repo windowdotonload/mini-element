@@ -3,6 +3,11 @@
  * @version: 
  * @Author: windowdotonload
 -->
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: windowdotonload
+-->
 <template>
   <button>
       abc{{size}}
@@ -11,7 +16,7 @@
 
 <script>
 export default {
-    name:"ELButton",
+    name:"mButton",
     prop:{
         size:String
     }
