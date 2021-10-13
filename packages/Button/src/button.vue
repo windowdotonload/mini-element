@@ -3,24 +3,16 @@
  * @version: 
  * @Author: windowdotonload
 -->
-<!--
- * @Descripttion: 
- * @version: 
- * @Author: windowdotonload
--->
+
 <template>
-  <button>
-      abc{{size}}
-  </button>
+  <button>abc{{ size }}</button>
 </template>
 
 <script>
 export default {
-    name:"mButton",
-    prop:{
-        size:String
-    }
-}
+  name: "mButton",
+  prop: {
+    size: String,
+  },
+};
 </script>
-
-

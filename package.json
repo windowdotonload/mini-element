@@ -68,6 +68,7 @@
     "@commitlint/cli": "^12.0.1",
     "@commitlint/config-conventional": "^12.0.1",
     "@webpack-cli/serve": "^1.6.0",
+    "babel-plugin-dynamic-import-webpack": "^1.1.0",
     "commitizen": "^4.2.3",
     "commitlint-config-cz": "^0.13.2",
     "cz-customizable": "^6.3.0",
