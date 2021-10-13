@@ -7,7 +7,7 @@
 const path = require("path");
 const VueLoaderPlugin = require("vue-loader/lib/plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const dynamicImportWebpack = require("babel-plugin-dynamic-import-webpack");
+
 // const config = require("./config.js");
 
 module.exports = {
@@ -42,13 +42,10 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(jsx?|babel|es6|js)$/,
+        test: /\.(jsx?|babel|es6)$/,
         include: process.cwd(),
         exclude: /node_modules|utils\/popper\.js|utils\/date\.js/,
         loader: "babel-loader",
-        options: {
-          plugins: [dynamicImportWebpack],
-        },
       },
       {
         test: /\.vue$/,

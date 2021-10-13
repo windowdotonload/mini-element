@@ -11,7 +11,7 @@ export const routes = files.keys().map(item => {
   return {
     name: itemPath,
     path: `/${itemPath}`,
-    comonent: import(`packages/${reg.exec(item)[1]}`),
+    comonent: () => import(`packages/${reg.exec(item)[1]}`),
   };
 });
 // console.log("this is routes===========", routes);
