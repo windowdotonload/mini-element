@@ -13,7 +13,9 @@
         {{ item }}
       </span>
     </div>
-    <div class="content"></div>
+    <div class="content">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 

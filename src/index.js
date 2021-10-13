@@ -11,7 +11,7 @@ const install = vue => {
     vue.component(component.name, component);
   });
 };
-console.log("this i ok");
+
 export default {
   install,
 };
