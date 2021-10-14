@@ -11,16 +11,16 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   mode: "production",
-  // entry: {
-  //   app: ["./src/index.js"],
-  // },
-  entry: path.join(__dirname, "../src/index.js"),
+  entry: {
+    app: [path.join(__dirname, "../src/index.js")],
+  },
+  // entry: path.join(__dirname, "../src/index.js"),
 
   output: {
     path: path.resolve(process.cwd(), "./lib"),
     // publicPath: "",
-    filename: "element-ui.common.js",
-    // chunkFilename: "[id].js",
+    filename: "element-ui.common.[id].js",
+    chunkFilename: "[name]-[id].js",
     // libraryExport: "default",
     // library: "ELEMENT",
     // libraryTarget: "esm",

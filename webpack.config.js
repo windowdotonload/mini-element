@@ -20,8 +20,8 @@ module.exports = {
   output: {
     path: path.resolve(process.cwd(), "./lib"),
     // publicPath: "",
-    filename: "tryElm.js",
-    // chunkFilename: "[id].js",
+    filename: "tryElm.[name].js",
+    chunkFilename: "[id].js",
     // libraryExport: "default",
     // library: "ELEMENT",
     // libraryTarget: "esm",
