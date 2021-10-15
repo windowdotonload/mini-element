@@ -8,19 +8,17 @@
  * @version: 
  * @Author: windowdotonload
 -->
-
 <template>
-  <div>
-    <button>abc{{ size }}</button>
-    <m-buttom></m-buttom>
-  </div>
+  <h1>this is button</h1>
 </template>
 
 <script>
-import mButtom from "../index";
 export default {
-  components: {
-    mButtom,
+  name: "mButton",
+  prop: {
+    size: String,
   },
 };
 </script>
+
+<style></style>
