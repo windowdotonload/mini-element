@@ -3,13 +3,23 @@
  * @version: 
  * @Author: windowdotonload
 -->
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: windowdotonload
+-->
 <template>
   <div class="layout">
     <header class="header">
       <h1>Mini-ELEMENT</h1>
     </header>
     <div class="sider">
-      <span class="menu--item" v-for="item in menuName" :key="item">
+      <span
+        class="menu--item"
+        v-for="item in menuName"
+        :key="item"
+        @click="goComponent(item)"
+      >
         {{ item }}
       </span>
     </div>
@@ -27,6 +37,13 @@ export default {
     return {
       menuName,
     };
+  },
+  methods: {
+    goComponent(item) {
+      const comName = item.slice(1).toLowerCase();
+      if (comName == this.$route.name) return;
+      this.$router.push({ name: comName });
+    },
   },
 };
 </script>

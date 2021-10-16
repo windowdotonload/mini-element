@@ -18,6 +18,7 @@ const routes = buildRoutes.map(item => {
       require([`../packages/${dirname}/src/${name}.vue`], resolve),
   };
 });
+routes.push({ path: "/", redirect: "/button" });
 // console.log("this is routes =====>", routes);
 
 export const router = new VueRouter({
