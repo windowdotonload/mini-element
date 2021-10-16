@@ -8,6 +8,11 @@
  * @version:
  * @Author: windowdotonload
  */
+/*
+ * @Descripttion:
+ * @version:
+ * @Author: windowdotonload
+ */
 
 "use strict";
 
@@ -35,6 +40,7 @@ function copyfont() {
 
 function modcss() {
   return watch("./src/*.scss", function () {
+    console.log("this is modcss");
     compile();
   });
 }
