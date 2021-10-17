@@ -9,7 +9,7 @@
  * @Author: windowdotonload
 -->
 <template>
-  <button class="m-buttom">123</button>
+  <button class="m-button">123</button>
 </template>
 
 <script>

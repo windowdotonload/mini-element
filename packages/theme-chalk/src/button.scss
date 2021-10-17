@@ -1,5 +1,7 @@
-.m-button{
-    width: 100px;
-    height: 50px;
+@import "./mixins/mixins.scss";
+@include b(button) {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: red;
 }
-
