@@ -9,7 +9,11 @@
  * @Author: windowdotonload
 -->
 <template>
-  <button class="m-button">123</button>
+  <button class="m-button">
+    <span v-if="$slots.default">
+      <slot />
+    </span>
+  </button>
 </template>
 
 <script>
@@ -18,6 +22,9 @@ export default {
   name: "mButton",
   prop: {
     size: String,
+  },
+  created() {
+    console.log(this.$slots);
   },
 };
 </script>

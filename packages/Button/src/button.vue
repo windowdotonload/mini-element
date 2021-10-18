@@ -11,7 +11,7 @@
 
 <template>
   <div>
-    <m-buttom></m-buttom>
+    <m-buttom> m-button </m-buttom>
   </div>
 </template>
 
