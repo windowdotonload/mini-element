@@ -8,8 +8,17 @@
  * @version: 
  * @Author: windowdotonload
 -->
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: windowdotonload
+-->
 <template>
-  <button class="m-button">
+  <button
+    @click="handleClick"
+    class="m-button"
+    :class="[type ? `m-button--${type}` : '']"
+  >
     <span v-if="$slots.default">
       <slot />
     </span>
@@ -20,11 +29,19 @@
 import "../theme-chalk/src/button.scss";
 export default {
   name: "mButton",
-  prop: {
-    size: String,
+  props: {
+    type: {
+      type: String,
+      default: "default",
+    },
   },
   created() {
     console.log(this.$slots);
+  },
+  methods: {
+    handleClick(evt) {
+      this.$emit("click", evt);
+    },
   },
 };
 </script>

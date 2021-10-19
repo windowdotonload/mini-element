@@ -4,4 +4,27 @@
   width: 80px;
   height: 30px;
   border-radius: 5px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  border: 1px;
+  margin: 10px;
+}
+.m-button--primary {
+  background-color: #409eff;
+}
+.m-button--success {
+  background-color: #67c23a;
+}
+.m-button--info {
+  background-color: #909399;
+}
+.m-button--warning {
+  background-color: #e6a23c;
+}
+.m-button--danger {
+  background-color: #f56c6c;
 }
